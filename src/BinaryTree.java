@@ -202,10 +202,9 @@ public class BinaryTree {
     private boolean hasPathSum(Node node, int sum) {
         if (node == null) {
             return false;
-        } else if (sum - node.data == 0) {
-            return true;
         } else {
-            return hasPathSum(node.left, sum - node.data) || hasPathSum(node.right, sum - node.data);
+            sum -= node.data;
+            return (sum == 0) || hasPathSum(node.left, sum) || hasPathSum(node.right, sum);
         }
     }
 
