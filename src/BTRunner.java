@@ -8,8 +8,8 @@
 public class BTRunner {
 
     public static void main(String[] args) {
-        BinaryTree tree = new BinaryTree();
-
-
+        BinaryTree tree = new BinaryTree(4, 2, 5, 1, 3);
+        tree.mirror();
+        tree.printPaths();
     }
 }
